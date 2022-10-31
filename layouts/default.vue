@@ -103,7 +103,73 @@
         </div>
         <div class="v-navigation-drawer__border"></div>
       </nav>
-      <main class="v-content" data-booted="true"><Nuxt /></main>
+      <main
+        class="v-content"
+        data-booted="true"
+        style="padding: 75px 0px 0px 260px"
+      >
+        <div class="v-content__wrap">
+          <Nuxt /><!-- <footer
+          class="v-footer v-sheet v-sheet--tile theme--light"
+          id="dashboard-core-footer"
+          data-booted="true"
+        >
+          <div class="container">
+            <div class="row no-gutters align-center">
+              <div class="text-center mb-sm-0 mb-5 col col-auto">
+                <a
+                  href="#"
+                  rel="noopener"
+                  target="_blank"
+                  class="mr-0 grey--text text--darken-3"
+                  >Creative Tim</a
+                >
+              </div>
+              <div class="text-center mb-sm-0 mb-5 col col-auto">
+                <a
+                  href="#"
+                  rel="noopener"
+                  target="_blank"
+                  class="mr-0 grey--text text--darken-3"
+                  >About Us</a
+                >
+              </div>
+              <div class="text-center mb-sm-0 mb-5 col col-auto">
+                <a
+                  href="#"
+                  rel="noopener"
+                  target="_blank"
+                  class="mr-0 grey--text text--darken-3"
+                  >Blog</a
+                >
+              </div>
+              <div class="text-center mb-sm-0 mb-5 col col-auto">
+                <a
+                  href="#"
+                  rel="noopener"
+                  target="_blank"
+                  class="mr-0 grey--text text--darken-3"
+                  >Licenses</a
+                >
+              </div>
+              <div class="spacer hidden-sm-and-down"></div>
+              <div class="col-md-auto col-12">
+                <div class="body-1 font-weight-light pt-6 pt-md-0 text-center">
+                  © 2019, made with
+                  <i
+                    aria-hidden="true"
+                    class="v-icon notranslate mdi mdi-heart theme--light"
+                    style="font-size: 18px"
+                  ></i>
+                  by <a href="https://www.creative-tim.com">Creative Tim</a> for
+                  a better web.
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer> -->
+        </div>
+      </main>
     </div>
   </div>
 </template>
@@ -111,7 +177,7 @@
 <script>
 import { SIDE_BAR } from '~/constants/sidebar';
 export default {
-  name: 'DashBoard',
+  name: 'DefaultLayout',
   data() {
     return {
       SIDE_BAR,
@@ -140,7 +206,7 @@ export default {
   background-color: #8d448b;
 }
 /* .v-image__image--preload {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
-  background-position: center center;
-} */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    background-position: center center;
+  } */
 </style>

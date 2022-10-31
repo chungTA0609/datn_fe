@@ -1,4 +1,9 @@
 {
-  "semi": false,
-  "singleQuote": true
+  "arrowParens": "always",
+  "endOfLine": "crlf",
+  "semi": true,
+  "singleQuote": true,
+  "printWidth": 80,
+  "formatOnSave": true,
+  "tabWidth": 2
 }
