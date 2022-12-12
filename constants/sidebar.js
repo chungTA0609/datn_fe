@@ -2,22 +2,22 @@ export const SIDE_BAR = [
   {
     id: 1,
     name: 'Profile',
-    url: '',
+    url: '/profile',
   },
   {
     id: 2,
-    name: 'Time Keeping',
-    url: '',
+    name: 'Working Time Monthly',
+    url: '/time_keeping',
   },
   {
     id: 3,
     name: 'Paid Leave',
-    url: '',
+    url: '/paid_leave',
   },
   {
     id: 4,
     name: 'Missing work',
-    url: '',
+    url: '/missing_work',
   },
   {
     id: 5,

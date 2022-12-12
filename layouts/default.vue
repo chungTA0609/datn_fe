@@ -69,7 +69,7 @@
             <a
               v-for="(item, idx) in SIDE_BAR"
               :key="idx"
-              href="#"
+              :href="item.url"
               class="v-list-item v-list-item--link theme--dark"
               :tabindex="item.id"
               ><div class="v-list-item__icon">
@@ -86,7 +86,7 @@
           </div>
         </div>
         <div class="v-navigation-drawer__append">
-          <a
+          <!-- <a
             href="#"
             class="v-list-item v-list-item--link theme--dark"
             tabindex="0"
@@ -97,9 +97,9 @@
               ></i>
             </div>
             <div class="v-list-item__content">
-              <div class="v-list-item__title">Upgrade To PRO</div>
+              <div class="v-list-item__title"></div>
               <div class="v-list-item__subtitle"></div></div
-          ></a>
+          ></a> -->
         </div>
         <div class="v-navigation-drawer__border"></div>
       </nav>
@@ -182,7 +182,11 @@ export default {
     return {
       SIDE_BAR,
       urlImage: '',
+      host: '',
     };
+  },
+  mounted() {
+    this.host = window.location.host;
   },
 };
 </script>

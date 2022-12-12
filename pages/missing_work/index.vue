@@ -9,11 +9,13 @@
           >
             <div class="d-flex grow flex-wrap"></div>
             <h4 class="card-title font-weight-light mt-2 ml-2">
-              Time Keeping Report
+              <a
+                ><span @click="gotoUrl($route.path + '/my_ticket')"
+                  >My adding missing attendance</span
+                ></a
+              >
             </h4>
-            <p class="d-inline-flex font-weight-light ml-2 mt-1">
-              This month time keeping
-            </p>
+            <p class="d-inline-flex font-weight-light ml-2 mt-1"></p>
             <hr
               role="separator"
               aria-orientation="horizontal"
@@ -33,11 +35,13 @@
           >
             <div class="d-flex grow flex-wrap"></div>
             <h4 class="card-title font-weight-light mt-2 ml-2">
-              Last month time keeping
+              <a
+                ><span @click="gotoUrl($route.path + '/relate_me')"
+                  >Supplement relates to me</span
+                ></a
+              >
             </h4>
-            <p class="d-inline-flex font-weight-light ml-2 mt-1">
-              Last month time keeping
-            </p>
+            <p class="d-inline-flex font-weight-light ml-2 mt-1"></p>
             <hr
               role="separator"
               aria-orientation="horizontal"
@@ -55,9 +59,11 @@
 
 <script>
 import Square from '~/components/Square.vue';
+import url from '~/mixins/url';
 export default {
-  name: 'TimeKeeping',
+  name: 'MissingWork',
   layout: 'default',
+  mixins: [url],
   components: {
     Square,
   },
