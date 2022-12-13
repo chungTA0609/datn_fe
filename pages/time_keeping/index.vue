@@ -9,7 +9,11 @@
           >
             <div class="d-flex grow flex-wrap"></div>
             <h4 class="card-title font-weight-light mt-2 ml-2">
-              Time Keeping Report
+              <a
+                ><span @click="gotoUrl($route.path + '/' + id)"
+                  >Time Keeping Report</span
+                ></a
+              >
             </h4>
             <p class="d-inline-flex font-weight-light ml-2 mt-1">
               This month time keeping
@@ -33,7 +37,11 @@
           >
             <div class="d-flex grow flex-wrap"></div>
             <h4 class="card-title font-weight-light mt-2 ml-2">
-              Last month time keeping
+              <a
+                ><span @click="gotoUrl($route.path + '/list_timekeeping')"
+                  >Last month time keeping</span
+                ></a
+              >
             </h4>
             <p class="d-inline-flex font-weight-light ml-2 mt-1">
               Last month time keeping
@@ -55,11 +63,18 @@
 
 <script>
 import Square from '~/components/Square.vue';
+import url from '~/mixins/url';
 export default {
   name: 'TimeKeeping',
   layout: 'default',
+  mixins: [url],
   components: {
     Square,
+  },
+  data() {
+    return {
+      id: 1,
+    };
   },
 };
 </script>
