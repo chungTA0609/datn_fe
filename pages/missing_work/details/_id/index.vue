@@ -10,10 +10,10 @@
               class="text-start v-card--material__heading mb-n6 v-sheet theme--dark elevation-6 pa-7"
               style="width: 100%; background-color: #8d448b; border-radius: 4px"
             >
-              <div class="display-2 font-weight-light">New Missing Ticket</div>
-              <div class="subtitle-1 font-weight-light">
-                Complete your missing ticket
+              <div class="display-2 font-weight-light">
+                Details of adding missing attendance
               </div>
+              <div class="subtitle-1 font-weight-light"></div>
               <!---->
             </div>
             <!---->
@@ -298,7 +298,7 @@
 <script>
 import DatePicker from '~/components/DatePicker.vue';
 export default {
-  name: 'NewMissingTicket',
+  name: 'DetailsMissingTicket',
   components: {
     DatePicker,
   },

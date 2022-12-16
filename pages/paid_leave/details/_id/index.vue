@@ -10,10 +10,10 @@
               class="text-start v-card--material__heading mb-n6 v-sheet theme--dark elevation-6 pa-7"
               style="width: 100%; background-color: #8d448b; border-radius: 4px"
             >
-              <div class="display-2 font-weight-light">New Missing Ticket</div>
-              <div class="subtitle-1 font-weight-light">
-                Complete your missing ticket
+              <div class="display-2 font-weight-light">
+                Details of paid leave registration
               </div>
+              <div class="subtitle-1 font-weight-light"></div>
               <!---->
             </div>
             <!---->
@@ -147,6 +147,36 @@
                             class="v-label v-label--active theme--light"
                             :class="[isInputting ? '' : 'v-label--is-disabled']"
                             style="left: 0px; right: auto; position: absolute"
+                            >Substitute</label
+                          ><input
+                            :disabled="!isInputting"
+                            id="input-207"
+                            type="text"
+                            v-model="formData.substitute"
+                          />
+                        </div>
+                      </div>
+                      <div class="v-text-field__details">
+                        <div class="v-messages theme--light">
+                          <div class="v-messages__wrapper"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-12">
+                  <div
+                    class="v-input purple-input theme--light v-text-field v-text-field--is-booted"
+                    :class="[isInputting ? '' : 'v-input--is-disabled']"
+                  >
+                    <div class="v-input__control">
+                      <div class="v-input__slot">
+                        <div class="v-text-field__slot">
+                          <label
+                            for="input-207"
+                            class="v-label v-label--active theme--light"
+                            :class="[isInputting ? '' : 'v-label--is-disabled']"
+                            style="left: 0px; right: auto; position: absolute"
                             >Related person</label
                           ><input
                             :disabled="!isInputting"
@@ -162,62 +192,6 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="col-md-1 col-12" style="padding-top: 20px">
-                  <div class="col col-4">
-                    <div class="v-list-item__action">
-                      <div
-                        class="v-input theme--light v-input--selection-controls v-input--checkbox"
-                        :class="[
-                          formData.isOT
-                            ? 'secondary--text v-input--is-label-active v-input--is-dirty'
-                            : '',
-                          isInputting ? '' : 'v-input--is-disabled',
-                        ]"
-                      >
-                        <div class="v-input__control" @click="changeIsOT">
-                          <div class="v-input__slot">
-                            <div class="v-input--selection-controls__input">
-                              <i
-                                aria-hidden="true"
-                                class="v-icon notranslate mdi theme--light"
-                                :class="[
-                                  formData.isOT
-                                    ? 'secondary--text mdi-checkbox-marked'
-                                    : 'mdi-checkbox-blank-outline',
-                                ]"
-                              ></i
-                              ><input
-                                :aria-checked="formData.isOT"
-                                id="input-1073"
-                                role="checkbox"
-                                type="checkbox"
-                              />
-                              <div
-                                class="v-input--selection-controls__ripple"
-                                :class="[
-                                  formData.isOT
-                                    ? 'secondary--text'
-                                    : 'primary--text',
-                                ]"
-                              ></div>
-                            </div>
-                          </div>
-                          <div
-                            class="v-messages theme--light"
-                            :class="[formData.isOT ? 'secondary--text' : '']"
-                          >
-                            <div class="v-messages__wrapper"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 col-12" style="padding-top: 30px">
-                  <div class="col col-12">
-                    <div class="font-weight-light">Adding Missing OT hours</div>
                   </div>
                 </div>
                 <div class="col-md-6 col-12" style="top: -16px">
@@ -298,7 +272,7 @@
 <script>
 import DatePicker from '~/components/DatePicker.vue';
 export default {
-  name: 'NewMissingTicket',
+  name: 'DetailPaidTicket',
   components: {
     DatePicker,
   },
@@ -308,7 +282,7 @@ export default {
       items: ['Foo', 'Bar', 'Fizz', 'Buzz'],
       formData: {
         approver: null,
-        isOT: false,
+        substitute: null,
         relatedPerson: null,
         startDate: null,
         endDate: null,
@@ -334,9 +308,6 @@ export default {
     },
     handleOnCancel() {
       this.isInputting = false;
-    },
-    changeIsOT() {
-      this.formData.isOT = !this.formData.isOT;
     },
   },
 };
